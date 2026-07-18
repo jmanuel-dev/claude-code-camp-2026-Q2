@@ -4,3 +4,6 @@
 # Environment / secrets
 .env
 .env.local
+
+# Claude MD
+CLAUDE.md
