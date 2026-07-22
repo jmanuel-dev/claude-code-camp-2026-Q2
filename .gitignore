@@ -6,10 +6,10 @@
 .env.local
 
 # Claude MD
-CLAUDE.md
+/CLAUDE.md
 
 # NOTES
-NOTES.md
+/NOTES.md
 
 # .claude personal
-.claude
+/.claude
