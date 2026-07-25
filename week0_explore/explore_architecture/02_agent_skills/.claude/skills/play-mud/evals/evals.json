@@ -1,0 +1,26 @@
+{
+  "skill_name": "play-mud",
+  "evals": [
+    {
+      "id": 1,
+      "name": "orient-and-report",
+      "prompt": "I've got a tbaMUD/CircleMUD server running locally on localhost:4000, with a character already logged in as dummy/helloworld. Can you connect and tell me exactly where my character is right now and what the room looks like?",
+      "expected_output": "Establishes one persistent connection (not a fresh reconnect per command), logs in as dummy, issues a look-equivalent command, and reports back the actual room name/description/exits observed from the live server.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "explore-and-return",
+      "prompt": "Connect to my MUD character (tbaMUD on localhost:4000, dummy/helloworld) and explore a couple of rooms in different directions from wherever you start. Tell me what you find, then make sure you end up back where you started.",
+      "expected_output": "Maintains one session across multiple moves (no dropped/re-logged-in connection), correctly reports the rooms/exits actually seen, and verifiably returns to the starting room (e.g. confirmed via a final look) by reversing the path taken.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "status-and-shop",
+      "prompt": "Hop into my MUD (localhost:4000, tbaMUD, login dummy/helloworld), check my character's health/level/gold, and see if you can track down a shop nearby — tell me what it's selling.",
+      "expected_output": "Checks score/inventory/gold via the appropriate in-game commands, explores toward a shop room, and reports back the shop's actual sell listing pulled from the live server rather than a guess.",
+      "files": []
+    }
+  ]
+}
